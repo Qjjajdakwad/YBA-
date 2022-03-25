@@ -1,0 +1,607 @@
+local ScreenGui = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local Toxic = Instance.new("TextButton")
+local TextButtonBlood = Instance.new("ImageButton")
+local UmbrellaButton = Instance.new("ImageButton")
+local Setings = Instance.new("TextButton")
+local next = Instance.new("Frame")
+local Swaip = Instance.new("TextButton")
+local All = Instance.new("Frame")
+local LIST = Instance.new("TextButton")
+local Miscmenu = Instance.new("Frame")
+local PlayerList = Instance.new("TextLabel")
+local RGB = Instance.new("Frame")
+local RGB_2 = Instance.new("Frame")
+local SeeBlood = Instance.new("TextLabel")
+local SeeArrow = Instance.new("TextLabel")
+local SeeHpBar = Instance.new("TextLabel")
+local SeeEXscore = Instance.new("TextLabel")
+local Reset_standart = Instance.new("TextButton")
+local OffAll = Instance.new("TextButton")
+local PlayerList_chekbox = Instance.new("TextButton")
+local SeeBlood_chekbox = Instance.new("TextButton")
+local SeeArrow_chekbox = Instance.new("TextButton")
+local SeeHPbar_chekbox = Instance.new("TextButton")
+local SeeEXpScore_chekbox = Instance.new("TextButton")
+local ToxicMeny = Instance.new("ImageLabel")
+local EZ = Instance.new("TextButton")
+local RGB_3 = Instance.new("Frame")
+local WEll = Instance.new("TextButton")
+local EZarab = Instance.new("TextButton")
+local Tiltock = Instance.new("TextButton")
+local RGB_4 = Instance.new("Frame")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ResetOnSpawn = false
+
+Main.Name = "Main"
+Main.Parent = ScreenGui
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Main.Position = UDim2.new(0, 0, 0.143859655, 0)
+Main.Size = UDim2.new(0, 39, 0, 136)
+Main.Style = Enum.FrameStyle.RobloxSquare
+
+Toxic.Name = "Toxic"
+Toxic.Parent = Main
+Toxic.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Toxic.Position = UDim2.new(-0.456952095, 0, 0.450418204, 0)
+Toxic.Size = UDim2.new(0, 43, 0, 37)
+Toxic.Style = Enum.ButtonStyle.RobloxButton
+Toxic.Font = Enum.Font.SourceSans
+Toxic.Text = "Toxic"
+Toxic.TextColor3 = Color3.fromRGB(255, 255, 255)
+Toxic.TextSize = 14.000
+Toxic.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Toxic.MouseButton1Down:connect(function()
+if ToxicMeny.Visible == false
+	then ToxicMeny.Visible = true 
+	else ToxicMeny.Visible = false 
+	end
+end)
+
+TextButtonBlood.Name = "TextButtonBlood"
+TextButtonBlood.Parent = Main
+TextButtonBlood.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+TextButtonBlood.Position = UDim2.new(-0.339158177, 0, -0.0985340029, 0)
+TextButtonBlood.Size = UDim2.new(0, 38, 0, 37)
+TextButtonBlood.Style = Enum.ButtonStyle.RobloxButton
+TextButtonBlood.Image = "http://www.roblox.com/asset/?id=5637704187"
+
+
+UmbrellaButton.Name = "UmbrellaButton"
+UmbrellaButton.Parent = Main
+UmbrellaButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+UmbrellaButton.Position = UDim2.new(-0.273918748, 0, 0.23022306, 0)
+UmbrellaButton.Size = UDim2.new(0, 34, 0, 27)
+UmbrellaButton.Style = Enum.ButtonStyle.RobloxButton
+UmbrellaButton.Image = "rbxassetid://272179039"
+UmbrellaButton.MouseButton1Down:connect(function()
+    _G.AntiVamp = true
+local AntiVamp
+AntiVamp = hookfunction(getrawmetatable(game).__namecall, newcclosure(function(self, ...)
+  local args = {...}
+  if self.Name == "RemoteEvent" then
+  if args[1] == "VampireBurn" and _G.AntiVamp == true  then
+          return wait(9e9)
+  elseif _G.AntiVamp == false then
+          return AntiVamp(self,...)
+          end
+      end
+  return AntiVamp(self, ...)
+end))
+end)
+
+Setings.Name = "Setings"
+Setings.Parent = Main
+Setings.BackgroundColor3 = Color3.fromRGB(27, 42, 53)
+Setings.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Setings.Position = UDim2.new(-0.456952095, 0, 0.722477019, 0)
+Setings.Size = UDim2.new(0, 43, 0, 37)
+Setings.Style = Enum.ButtonStyle.RobloxButton
+Setings.Font = Enum.Font.SourceSans
+Setings.Text = "Misc"
+Setings.TextColor3 = Color3.fromRGB(255, 255, 255)
+Setings.TextSize = 14.000
+Setings.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Setings.MouseButton1Down:connect(function()
+	if Miscmenu.Visible == false
+		then Miscmenu.Visible = true
+			else Miscmenu.Visible = false
+		end
+end)
+
+next.Name = "next"
+next.Parent = ScreenGui
+next.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+next.BorderColor3 = Color3.fromRGB(27, 42, 53)
+next.Position = UDim2.new(0.00390320946, 0, 0.115789473, 0)
+next.Size = UDim2.new(0, 33, 0, 7)
+next.Style = Enum.FrameStyle.RobloxSquare
+
+Swaip.Name = "Swaip"
+Swaip.Parent = next
+Swaip.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Swaip.Position = UDim2.new(-0.196912467, 0, -1.44955242, 0)
+Swaip.Size = UDim2.new(0, 36, 0, 15)
+Swaip.Font = Enum.Font.SourceSans
+Swaip.Text = "==>"
+Swaip.TextColor3 = Color3.fromRGB(255, 255, 255)
+Swaip.TextSize = 14.000
+
+All.Name = "All"
+All.Parent = ScreenGui
+All.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+All.BorderColor3 = Color3.fromRGB(27, 42, 53)
+All.Position = UDim2.new(0.00135430694, 0, 0.313450277, 0)
+All.Size = UDim2.new(0, 33, 0, 7)
+All.Style = Enum.FrameStyle.RobloxSquare
+
+LIST.Name = "LIST"
+LIST.Parent = All
+LIST.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+LIST.Position = UDim2.new(-0.0757002532, 0, -5.30669737, 0)
+LIST.Size = UDim2.new(0, 36, 0, 15)
+LIST.Font = Enum.Font.SourceSans
+LIST.Text = "Tab"
+LIST.TextColor3 = Color3.fromRGB(255, 255, 255)
+LIST.TextSize = 14.000
+
+Miscmenu.Name = "Miscmenu"
+Miscmenu.Parent = ScreenGui
+Miscmenu.BackgroundColor3 = Color3.fromRGB(43, 42, 42)
+Miscmenu.Position = UDim2.new(0.408396989, 0, 0.253801167, 0)
+Miscmenu.Size = UDim2.new(0, 267, 0, 297)
+Miscmenu.Visible = false
+
+PlayerList.Name = "PlayerList"
+PlayerList.Parent = Miscmenu
+PlayerList.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+PlayerList.BorderColor3 = Color3.fromRGB(88, 88, 88)
+PlayerList.Position = UDim2.new(0.0481091887, 0, 0.0225496106, 0)
+PlayerList.Size = UDim2.new(0, 191, 0, 36)
+PlayerList.Font = Enum.Font.SourceSans
+PlayerList.Text = "Player_List"
+PlayerList.TextColor3 = Color3.fromRGB(255, 255, 255)
+PlayerList.TextSize = 14.000
+
+RGB.Name = "RGB"
+RGB.Parent = Miscmenu
+RGB.BackgroundColor3 = Color3.fromRGB(255, 24, 27)
+RGB.Position = UDim2.new(-0.000579948304, 0, -0.00250386447, 0)
+RGB.Size = UDim2.new(0, 267, 0, 2)
+
+RGB_2.Name = "RGB"
+RGB_2.Parent = Miscmenu
+RGB_2.BackgroundColor3 = Color3.fromRGB(255, 24, 27)
+RGB_2.Position = UDim2.new(-0.000579948304, 0, 0.990762115, 0)
+RGB_2.Size = UDim2.new(0, 267, 0, 2)
+
+SeeBlood.Name = "SeeBlood"
+SeeBlood.Parent = Miscmenu
+SeeBlood.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+SeeBlood.BorderColor3 = Color3.fromRGB(88, 88, 88)
+SeeBlood.Position = UDim2.new(0.0481091887, 0, 0.170697764, 0)
+SeeBlood.Size = UDim2.new(0, 191, 0, 36)
+SeeBlood.Font = Enum.Font.SourceSans
+SeeBlood.Text = "Blood_Bar"
+SeeBlood.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeeBlood.TextSize = 14.000
+
+SeeArrow.Name = "SeeArrow"
+SeeArrow.Parent = Miscmenu
+SeeArrow.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+SeeArrow.BorderColor3 = Color3.fromRGB(88, 88, 88)
+SeeArrow.Position = UDim2.new(0.0481091887, 0, 0.315478921, 0)
+SeeArrow.Size = UDim2.new(0, 191, 0, 36)
+SeeArrow.Font = Enum.Font.SourceSans
+SeeArrow.Text = "Arrow"
+SeeArrow.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeeArrow.TextSize = 14.000
+
+SeeHpBar.Name = "SeeHpBar"
+SeeHpBar.Parent = Miscmenu
+SeeHpBar.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+SeeHpBar.BorderColor3 = Color3.fromRGB(88, 88, 88)
+SeeHpBar.Position = UDim2.new(0.0481091887, 0, 0.460260063, 0)
+SeeHpBar.Size = UDim2.new(0, 191, 0, 36)
+SeeHpBar.Font = Enum.Font.SourceSans
+SeeHpBar.Text = "Hp_Bar"
+SeeHpBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeeHpBar.TextSize = 14.000
+
+SeeEXscore.Name = "SeeEXscore"
+SeeEXscore.Parent = Miscmenu
+SeeEXscore.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+SeeEXscore.BorderColor3 = Color3.fromRGB(88, 88, 88)
+SeeEXscore.Position = UDim2.new(0.0481091887, 0, 0.608408213, 0)
+SeeEXscore.Size = UDim2.new(0, 191, 0, 36)
+SeeEXscore.Font = Enum.Font.SourceSans
+SeeEXscore.Text = "Experience_Score"
+SeeEXscore.TextColor3 = Color3.fromRGB(255, 255, 255)
+SeeEXscore.TextSize = 14.000
+
+Reset_standart.Name = "Reset_standart"
+Reset_standart.Parent = Miscmenu
+Reset_standart.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+Reset_standart.BorderColor3 = Color3.fromRGB(88, 88, 88)
+Reset_standart.Position = UDim2.new(0.0444806851, 0, 0.777458847, 0)
+Reset_standart.Size = UDim2.new(0, 110, 0, 50)
+Reset_standart.Font = Enum.Font.SourceSans
+Reset_standart.Text = "Reset_Standart"
+Reset_standart.TextColor3 = Color3.fromRGB(12, 245, 0)
+Reset_standart.TextSize = 14.000
+
+OffAll.Name = "OffAll"
+OffAll.Parent = Miscmenu
+OffAll.BackgroundColor3 = Color3.fromRGB(59, 59, 59)
+OffAll.BorderColor3 = Color3.fromRGB(88, 88, 88)
+OffAll.Position = UDim2.new(0.54635334, 0, 0.777458847, 0)
+OffAll.Size = UDim2.new(0, 102, 0, 50)
+OffAll.Font = Enum.Font.SourceSans
+OffAll.Text = "OFF_All"
+OffAll.TextColor3 = Color3.fromRGB(255, 5, 5)
+OffAll.TextSize = 14.000
+
+PlayerList_chekbox.Name = "PlayerList_chekbox"
+PlayerList_chekbox.Parent = Miscmenu
+PlayerList_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+PlayerList_chekbox.Position = UDim2.new(0.793241262, 0, 0.0200956706, 0)
+PlayerList_chekbox.Size = UDim2.new(0, 36, 0, 36)
+PlayerList_chekbox.Font = Enum.Font.SourceSans
+PlayerList_chekbox.Text = ""
+PlayerList_chekbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+PlayerList_chekbox.TextSize = 14.000
+PlayerList_chekbox.MouseButton1Down:connect(function()
+if game:GetService("Players").LocalPlayer.PlayerGui.HUD.Playerlist.Visible == true
+then game:GetService("Players").LocalPlayer.PlayerGui.HUD.Playerlist.Visible = false
+	PlayerList_chekbox.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+else game:GetService("Players").LocalPlayer.PlayerGui.HUD.Playerlist.Visible = true
+	PlayerList_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+end
+end)
+
+SeeBlood_chekbox.Name = "SeeBlood_chekbox"
+SeeBlood_chekbox.Parent = Miscmenu
+SeeBlood_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+SeeBlood_chekbox.Position = UDim2.new(0.793241262, 0, 0.168243825, 0)
+SeeBlood_chekbox.Size = UDim2.new(0, 36, 0, 36)
+SeeBlood_chekbox.Font = Enum.Font.SourceSans
+SeeBlood_chekbox.Text = ""
+SeeBlood_chekbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SeeBlood_chekbox.TextSize = 14.000
+SeeBlood_chekbox.MouseButton1Down:connect(function()
+if game:GetService("Players").LocalPlayer.PlayerGui["Blood Gui"].Frame.Visible == true
+then game:GetService("Players").LocalPlayer.PlayerGui["Blood Gui"].Frame.Visible = false
+SeeBlood_chekbox.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+else game:GetService("Players").LocalPlayer.PlayerGui["Blood Gui"].Frame.Visible = true
+SeeBlood_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+end
+end)
+
+
+SeeArrow_chekbox.Name = "SeeArrow_chekbox"
+SeeArrow_chekbox.Parent = Miscmenu
+SeeArrow_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+SeeArrow_chekbox.Position = UDim2.new(0.793241262, 0, 0.313024968, 0)
+SeeArrow_chekbox.Size = UDim2.new(0, 36, 0, 36)
+SeeArrow_chekbox.Font = Enum.Font.SourceSans
+SeeArrow_chekbox.Text = ""
+SeeArrow_chekbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SeeArrow_chekbox.TextSize = 14.000
+
+
+SeeHPbar_chekbox.Name = "SeeHPbar_chekbox"
+SeeHPbar_chekbox.Parent = Miscmenu
+SeeHPbar_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+SeeHPbar_chekbox.Position = UDim2.new(0.793241262, 0, 0.45780611, 0)
+SeeHPbar_chekbox.Size = UDim2.new(0, 36, 0, 36)
+SeeHPbar_chekbox.Font = Enum.Font.SourceSans
+SeeHPbar_chekbox.Text = ""
+SeeHPbar_chekbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SeeHPbar_chekbox.TextSize = 14.000
+SeeHPbar_chekbox.MouseButton1Down:connect(function()
+if game:GetService("Players").LocalPlayer.PlayerGui.HUD.Main.Indicators.Visible == true
+then game:GetService("Players").LocalPlayer.PlayerGui.HUD.Main.Indicators.Visible = false
+	SeeHPbar_chekbox.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+else game:GetService("Players").LocalPlayer.PlayerGui.HUD.Main.Indicators.Visible = true
+	SeeHPbar_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+end
+end)
+
+SeeEXpScore_chekbox.Name = "SeeEXpScore_chekbox"
+SeeEXpScore_chekbox.Parent = Miscmenu
+SeeEXpScore_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+SeeEXpScore_chekbox.Position = UDim2.new(0.793241262, 0, 0.605954289, 0)
+SeeEXpScore_chekbox.Size = UDim2.new(0, 36, 0, 36)
+SeeEXpScore_chekbox.Font = Enum.Font.SourceSans
+SeeEXpScore_chekbox.Text = ""
+SeeEXpScore_chekbox.TextColor3 = Color3.fromRGB(0, 0, 0)
+SeeEXpScore_chekbox.TextSize = 14.000
+SeeEXpScore_chekbox.MouseButton1Down:connect(function()
+if game:GetService("Players").LocalPlayer.PlayerGui.HUD.Main.Indicators.MultiTimer.Visible == false
+	then game:GetService("Players").LocalPlayer.PlayerGui.HUD.Main.Indicators.MultiTimer.Visible = true
+		SeeEXpScore_chekbox.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+else game:GetService("Players").LocalPlayer.PlayerGui.HUD.Main.Indicators.MultiTimer.Visible = false
+	SeeEXpScore_chekbox.BackgroundColor3 = Color3.fromRGB(87, 255, 10)
+end
+end)
+
+ToxicMeny.Name = "ToxicMeny"
+ToxicMeny.Parent = ScreenGui
+ToxicMeny.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ToxicMeny.BackgroundTransparency = 1.000
+ToxicMeny.Position = UDim2.new(0.395721912, 0, 0.323768616, 0)
+ToxicMeny.Size = UDim2.new(0, 272, 0, 173)
+ToxicMeny.Visible = false
+ToxicMeny.Image = "rbxassetid://3570695787"
+ToxicMeny.ImageColor3 = Color3.fromRGB(43, 42, 42)
+ToxicMeny.ScaleType = Enum.ScaleType.Slice
+ToxicMeny.SliceCenter = Rect.new(100, 100, 100, 100)
+ToxicMeny.SliceScale = 0.060
+
+EZ.Name = "EZ"
+EZ.Parent = ToxicMeny
+EZ.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+EZ.Position = UDim2.new(0.132352948, 0, 0.0404624268, 0)
+EZ.Size = UDim2.new(0, 200, 0, 31)
+EZ.Font = Enum.Font.SourceSans
+EZ.Text = "EZ"
+EZ.TextColor3 = Color3.fromRGB(0, 0, 0)
+EZ.TextSize = 14.000
+EZ.MouseButton1Down:connect(function()
+	local A_1 = "ez"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "motherless"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "braindead"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "trash"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "get good"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "cry"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "ez"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end)
+
+RGB_3.Name = "RGB"
+RGB_3.Parent = ToxicMeny
+RGB_3.BackgroundColor3 = Color3.fromRGB(255, 24, 27)
+RGB_3.Position = UDim2.new(0.0251552351, 0, -0.00475245155, 0)
+RGB_3.Size = UDim2.new(0, 258, 0, 3)
+
+WEll.Name = "WEll"
+WEll.Parent = ToxicMeny
+WEll.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+WEll.Position = UDim2.new(0.132352948, 0, 0.265895963, 0)
+WEll.Size = UDim2.new(0, 200, 0, 31)
+WEll.Font = Enum.Font.SourceSans
+WEll.Text = "Well Well Well"
+WEll.TextColor3 = Color3.fromRGB(0, 0, 0)
+WEll.TextSize = 14.000
+WEll.MouseButton1Down:connect(function()
+	local A_1 = "HoHO"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Well Well Well"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Dog"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Ez"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Well Well Well"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end)
+
+EZarab.Name = "EZ arab"
+EZarab.Parent = ToxicMeny
+EZarab.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+EZarab.Position = UDim2.new(0.132352948, 0, 0.479768813, 0)
+EZarab.Size = UDim2.new(0, 200, 0, 31)
+EZarab.Font = Enum.Font.SourceSans
+EZarab.Text = "سهل"
+EZarab.TextColor3 = Color3.fromRGB(0, 0, 0)
+EZarab.TextSize = 14.000
+EZarab.MouseButton1Down:connect(function()
+		local A_1 = "يا إلهي أنت كيس قمامة"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "احذف اللعبة"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "EZ EZ EZ EZ"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "اذهب لمشاهدة تيك توك"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "ايزيتشكا"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+end)
+
+Tiltock.Name = "Tiltock"
+Tiltock.Parent = ToxicMeny
+Tiltock.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+Tiltock.Position = UDim2.new(0.132352948, 0, 0.705202341, 0)
+Tiltock.Size = UDim2.new(0, 200, 0, 31)
+Tiltock.Font = Enum.Font.SourceSans
+Tiltock.Text = "Ты тот самый тиктокер"
+Tiltock.TextColor3 = Color3.fromRGB(0, 0, 0)
+Tiltock.TextSize = 14.000
+Tiltock.MouseButton1Down:connect(function()
+	local A_1 = "Я тебя откуда то знаю"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "А вспомнил"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Ты_тот_самый_Тиктокер?"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Ура я в видео"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+wait(0.3)
+local A_1 = "Я тебя в тиктоке видел"
+local A_2 = "All"
+local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest
+Event:FireServer(A_1, A_2)
+
+end)
+
+
+RGB_4.Name = "RGB"
+RGB_4.Parent = ToxicMeny
+RGB_4.BackgroundColor3 = Color3.fromRGB(255, 24, 27)
+RGB_4.Position = UDim2.new(0.0508905314, 0, 0.977906525, 0)
+RGB_4.Size = UDim2.new(0, 244, 0, 3)
+
+-- Scripts:
+
+local function QKXWZZ_fake_script() -- ScreenGui.Script 
+	local script = Instance.new('Script', ScreenGui)
+
+	frame = script.Parent.Miscmenu
+	
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(QKXWZZ_fake_script)()
+local function IFSM_fake_script() -- RGB.d 
+	local script = Instance.new('Script', RGB)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(IFSM_fake_script)()
+local function WWJGYNM_fake_script() -- RGB_2.d 
+	local script = Instance.new('Script', RGB_2)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(WWJGYNM_fake_script)()
+local function PPEDDE_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local Plr = game.Players.LocalPlayer
+	
+	Plr:GetMouse().KeyDown:Connect(function(K)
+		if K == "=" then
+			
+			if script.Parent.Enabled == true then
+				script.Parent.Enabled = false 
+			else script.Parent.Enabled = true
+			end
+		end
+	end)
+	
+end
+coroutine.wrap(PPEDDE_fake_script)()
+local function FUFSL_fake_script() -- RGB_3.d 
+	local script = Instance.new('Script', RGB_3)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(FUFSL_fake_script)()
+local function CJBZIOC_fake_script() -- RGB_4.d 
+	local script = Instance.new('Script', RGB_4)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(CJBZIOC_fake_script)()
+local function RPUXH_fake_script() -- ScreenGui.Script 
+	local script = Instance.new('Script', ScreenGui)
+
+	frame = script.Parent.ToxicMeny
+	
+	frame.Draggable = true
+	frame.Active = true
+	frame.Selectable = true
+end
+coroutine.wrap(RPUXH_fake_script)()
