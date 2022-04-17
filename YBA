@@ -69,7 +69,18 @@ TextButtonBlood.Position = UDim2.new(-0.339158177, 0, -0.0985340029, 0)
 TextButtonBlood.Size = UDim2.new(0, 38, 0, 37)
 TextButtonBlood.Style = Enum.ButtonStyle.RobloxButton
 TextButtonBlood.Image = "http://www.roblox.com/asset/?id=5637704187"
+TextButtonBlood.MouseButton1Down:connect(function()
+local A_1 = "EndDialogue"
+local A_2 = 
+{
+	["NPC"] = "Alex", 
+	["Option"] = "Option1", 
+	["Dialogue"] = "Dialogue4"
+}
 
+game:GetService("Players").LocalPlayer.Character.RemoteEvent:FireServer(A_1, A_2)
+
+end)
 
 UmbrellaButton.Name = "UmbrellaButton"
 UmbrellaButton.Parent = Main
